@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qrW-AG-Yl3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+            <string>AvenirNext-UltraLight</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="xzO-tM-hRL">
+            <objects>
+                <viewController id="4hi-qG-HDX" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Archery_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KU7-LX-r1B"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZu-KG-Ke9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7c3-Bq-DBu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="240" minValue="5" maxValue="240" translatesAutoresizingMaskIntoConstraints="NO" id="K0t-Ka-dC4">
+                                <rect key="frame" x="58" y="290" width="259" height="31"/>
+                                <connections>
+                                    <action selector="changeValueLastSeconds:" destination="4hi-qG-HDX" eventType="valueChanged" id="oG3-1x-F8q"/>
+                                    <action selector="shootingTimeChange:" destination="4hi-qG-HDX" eventType="valueChanged" id="1Kg-4w-QK1"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooting time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6z-eL-IO4">
+                                <rect key="frame" x="60" y="261" width="111" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8al-nM-v6H"/>
+                                    <constraint firstAttribute="width" constant="111" id="FKu-Fp-s5p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-PD-eb9">
+                                <rect key="frame" x="60" y="392" width="111" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0Sp-c4-f4s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB3-iG-KkV">
+                                <rect key="frame" x="60" y="122" width="103" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8xx-Qv-w0y"/>
+                                    <constraint firstAttribute="width" constant="103" id="ELV-tX-dMD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6C-d1-vtc">
+                                <rect key="frame" x="99" y="189" width="177" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xua-d2-nqg">
+                                <rect key="frame" x="99" y="328" width="177" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xf9-p3-fj7">
+                                <rect key="frame" x="58" y="151" width="259" height="31"/>
+                                <connections>
+                                    <action selector="waitingTimeChange:" destination="4hi-qG-HDX" eventType="valueChanged" id="z98-Sw-OOu"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwg-tg-VZl">
+                                <rect key="frame" x="123" y="528" width="128" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="c4v-Fa-fbe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="35"/>
+                                <state key="normal" title="Prepare">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="prepareTimer:" destination="4hi-qG-HDX" eventType="touchUpInside" id="aL7-kD-d2m"/>
+                                    <segue destination="15g-RG-cEU" kind="show" identifier="segue" id="WUs-RB-HuT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Km-ir-frb">
+                                <rect key="frame" x="99" y="421" width="177" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K0t-Ka-dC4" firstAttribute="leading" secondItem="W1c-PD-eb9" secondAttribute="leading" id="10f-wq-94U"/>
+                            <constraint firstItem="L6C-d1-vtc" firstAttribute="leading" secondItem="7c3-Bq-DBu" secondAttribute="leadingMargin" constant="83" id="6Sh-5K-rhg"/>
+                            <constraint firstItem="2Km-ir-frb" firstAttribute="top" secondItem="W1c-PD-eb9" secondAttribute="bottom" constant="8" symbolic="YES" id="8og-kU-8mh"/>
+                            <constraint firstItem="h6z-eL-IO4" firstAttribute="trailing" secondItem="W1c-PD-eb9" secondAttribute="trailing" id="969-Ax-uDw"/>
+                            <constraint firstItem="2Km-ir-frb" firstAttribute="centerX" secondItem="pwg-tg-VZl" secondAttribute="centerX" id="99k-WK-Ew8"/>
+                            <constraint firstItem="pwg-tg-VZl" firstAttribute="centerX" secondItem="7c3-Bq-DBu" secondAttribute="centerX" id="AQb-8K-QWr"/>
+                            <constraint firstItem="K0t-Ka-dC4" firstAttribute="top" secondItem="h6z-eL-IO4" secondAttribute="bottom" constant="8" symbolic="YES" id="ARu-MK-fdX"/>
+                            <constraint firstItem="L6C-d1-vtc" firstAttribute="top" secondItem="Xf9-p3-fj7" secondAttribute="bottom" constant="8" symbolic="YES" id="GCD-vu-PAG"/>
+                            <constraint firstItem="L6C-d1-vtc" firstAttribute="leading" secondItem="xua-d2-nqg" secondAttribute="leading" id="J0y-vq-klh"/>
+                            <constraint firstItem="pwg-tg-VZl" firstAttribute="top" secondItem="2Km-ir-frb" secondAttribute="bottom" constant="72" id="JuK-3E-Xze"/>
+                            <constraint firstItem="Xf9-p3-fj7" firstAttribute="leading" secondItem="h6z-eL-IO4" secondAttribute="leading" id="KqN-dV-sBw"/>
+                            <constraint firstItem="Xf9-p3-fj7" firstAttribute="top" secondItem="wB3-iG-KkV" secondAttribute="bottom" constant="8" symbolic="YES" id="L2F-kh-u7U"/>
+                            <constraint firstItem="Xf9-p3-fj7" firstAttribute="centerX" secondItem="L6C-d1-vtc" secondAttribute="centerX" id="O9Y-bx-kdK"/>
+                            <constraint firstItem="h6z-eL-IO4" firstAttribute="top" secondItem="L6C-d1-vtc" secondAttribute="bottom" constant="37" id="Pa4-PK-ZuC"/>
+                            <constraint firstItem="xua-d2-nqg" firstAttribute="leading" secondItem="2Km-ir-frb" secondAttribute="leading" id="SPy-F0-B7y"/>
+                            <constraint firstItem="Xf9-p3-fj7" firstAttribute="trailing" secondItem="K0t-Ka-dC4" secondAttribute="trailing" id="TFv-QX-cGR"/>
+                            <constraint firstItem="h6z-eL-IO4" firstAttribute="leading" secondItem="K0t-Ka-dC4" secondAttribute="leading" id="WeN-at-BiL"/>
+                            <constraint firstItem="L6C-d1-vtc" firstAttribute="trailing" secondItem="xua-d2-nqg" secondAttribute="trailing" id="aXk-m6-nGQ"/>
+                            <constraint firstItem="DZu-KG-Ke9" firstAttribute="top" secondItem="pwg-tg-VZl" secondAttribute="bottom" constant="79" id="amh-Th-yyS"/>
+                            <constraint firstItem="wB3-iG-KkV" firstAttribute="leading" secondItem="7c3-Bq-DBu" secondAttribute="leadingMargin" constant="44" id="arp-mb-fJv"/>
+                            <constraint firstItem="wB3-iG-KkV" firstAttribute="leading" secondItem="Xf9-p3-fj7" secondAttribute="leading" id="liK-mq-Ppj"/>
+                            <constraint firstItem="xua-d2-nqg" firstAttribute="trailing" secondItem="2Km-ir-frb" secondAttribute="trailing" id="xHK-mL-dcP"/>
+                            <constraint firstItem="xua-d2-nqg" firstAttribute="top" secondItem="K0t-Ka-dC4" secondAttribute="bottom" constant="8" symbolic="YES" id="y7x-CL-1Sb"/>
+                            <constraint firstItem="W1c-PD-eb9" firstAttribute="top" secondItem="xua-d2-nqg" secondAttribute="bottom" constant="29" id="yRy-2F-bgP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vKC-AN-0ea"/>
+                    <connections>
+                        <outlet property="lastSecondsLabel" destination="2Km-ir-frb" id="yDS-ae-gmV"/>
+                        <outlet property="shootingTimeLabel" destination="xua-d2-nqg" id="tfo-b5-Ui1"/>
+                        <outlet property="shootingTimeSlider" destination="K0t-Ka-dC4" id="CmS-1m-ipd"/>
+                        <outlet property="waitingTimeLabel" destination="L6C-d1-vtc" id="WSd-II-wbU"/>
+                        <outlet property="waitingTimeSlider" destination="Xf9-p3-fj7" id="7ei-M0-3VQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYU-ZF-9fL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551.20000000000005" y="-77.811094452773617"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="bZU-wc-Zo1">
+            <objects>
+                <viewController id="15g-RG-cEU" customClass="TimerViewController" customModule="Archery_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cYH-Bg-ImK"/>
+                        <viewControllerLayoutGuide type="bottom" id="XQf-RV-hVe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13g-LW-Pfn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-1c-agi">
+                                <rect key="frame" x="119" y="291" width="137" height="85"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="62"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moN-z3-euZ">
+                                <rect key="frame" x="116" y="455" width="142" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="aCJ-s9-z63"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="53"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="15g-RG-cEU" eventType="touchUpInside" id="kKO-et-juc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XQf-RV-hVe" firstAttribute="top" secondItem="moN-z3-euZ" secondAttribute="bottom" constant="89" id="8jG-TT-X4m"/>
+                            <constraint firstItem="ep1-1c-agi" firstAttribute="centerX" secondItem="13g-LW-Pfn" secondAttribute="centerX" id="dEZ-E3-ydj"/>
+                            <constraint firstItem="moN-z3-euZ" firstAttribute="centerX" secondItem="13g-LW-Pfn" secondAttribute="centerX" id="dQz-xV-lKF"/>
+                            <constraint firstItem="moN-z3-euZ" firstAttribute="top" secondItem="ep1-1c-agi" secondAttribute="bottom" constant="79" id="oAs-rP-8Az"/>
+                            <constraint firstItem="ep1-1c-agi" firstAttribute="centerY" secondItem="13g-LW-Pfn" secondAttribute="centerY" id="vVD-j3-7TE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="moN-z3-euZ" id="XS0-Mz-f93"/>
+                        <outlet property="time" destination="ep1-1c-agi" id="oyP-m5-LVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LQ-68-BRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.5999999999999" y="-77.811094452773617"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zz4-Kf-1ce">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrW-AG-Yl3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5MQ-uC-gw4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4hi-qG-HDX" kind="relationship" relationship="rootViewController" id="uiP-GD-ngv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20b-Bt-bU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="-78"/>
+        </scene>
+    </scenes>
+</document>
